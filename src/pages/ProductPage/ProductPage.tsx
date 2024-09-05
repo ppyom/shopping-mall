@@ -3,6 +3,7 @@ import ProductAPI from '../../apis/product.ts';
 import PageLayout from '../../components/layouts/PageLayout/PageLayout.tsx';
 import Filter, { type FilterValue } from '../../components/Filter/Filter.tsx';
 import Products from '../../components/Products/Products.tsx';
+import styles from './ProductPage.module.css';
 import type { Product } from '../../types/product.ts';
 
 const ProductPage = () => {
@@ -19,10 +20,10 @@ const ProductPage = () => {
   }, [filter]);
 
   return (
-    <PageLayout>
+    <PageLayout className={styles.productPage}>
       <h2>Shop The Latest</h2>
       <Filter current={filter} update={handleUpdateFilter} />
-      <Products products={products} />
+      <Products className={styles.products} products={products} />
     </PageLayout>
   );
 };
