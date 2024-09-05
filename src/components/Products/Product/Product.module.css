@@ -1,0 +1,38 @@
+.product > div {
+  @apply h-full overflow-hidden;
+  @apply border-2 border-neutral-gray rounded;
+  @apply relative;
+}
+.img {
+  @apply relative overflow-hidden p-[50%];
+}
+.img img {
+  @apply absolute top-0 left-0;
+  @apply size-full object-cover;
+  @apply duration-300;
+}
+.info {
+  @apply pt-2 px-2 pb-4;
+}
+.title {
+  @apply font-bold text-lg;
+}
+.price {
+  @apply text-main-accent font-medium;
+}
+.sale {
+  @apply text-service-errors line-through mr-2;
+}
+.discount {
+  @apply opacity-0;
+  @apply absolute top-4 left-4;
+  @apply bg-main-accent text-main-white rounded;
+  @apply px-2 text-sm font-medium;
+  @apply duration-300;
+}
+.product:hover .img img {
+  @apply scale-110;
+}
+.product:hover .discount {
+  @apply opacity-100;
+}

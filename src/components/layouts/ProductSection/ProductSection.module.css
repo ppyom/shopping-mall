@@ -1,0 +1,16 @@
+.productSection {
+  @apply flex flex-col;
+  @apply relative;
+}
+.productSection h3 {
+  @apply pt-4 pb-2;
+}
+.productSection > a {
+  @apply absolute top-4 right-0;
+  @apply py-2 text-main-accent font-bold;
+  @apply duration-300;
+  @apply bg-gradient-to-br from-main-black to-main-accent bg-clip-text;
+}
+.productSection > a:hover {
+  @apply text-transparent drop-shadow;
+}
