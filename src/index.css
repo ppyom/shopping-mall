@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 14px;
+  line-height: 1.5;
+  @apply font-main font-regular;
+  @apply text-main-black;
+}
+
+h1 {
+  @apply font-medium;
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+p.large {
+  @apply text-lg;
+}
+p.small {
+  @apply text-sm;
+}
