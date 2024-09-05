@@ -3,6 +3,7 @@ import type { Product } from '../types/product.ts';
 interface ProductSearchParams {
   limit?: number;
   page?: number;
+  sort?: string;
   category?: string;
 }
 
@@ -13,7 +14,7 @@ class ProductAPI {
   ): Promise<Product[]> {
     const searchParams = new URLSearchParams(
       Object.entries(options).map(([key, value]) => {
-        if (key === 'limit' || key === 'page') {
+        if (key === 'limit' || key === 'page' || key === 'sort') {
           return [`_${key}`, value.toString()];
         }
         return [key, value];
