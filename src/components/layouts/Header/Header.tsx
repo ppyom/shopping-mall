@@ -1,13 +1,40 @@
-import { useState } from 'react';
-import { Link, NavLink, NavLinkRenderProps } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import {
+  Link,
+  NavLink,
+  NavLinkRenderProps,
+  useLocation,
+} from 'react-router-dom';
 import styles from './Header.module.css';
 
 const Header = () => {
+  const { pathname } = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const setActiveLink = ({ isActive }: NavLinkRenderProps) => {
     return isActive ? styles.active : '';
   };
+
+  const menuClose = () => setMenuOpen(false);
+  const handleMenuClose = ({ target }: WindowEventMap['resize']) => {
+    if (target instanceof window) {
+      target.innerWidth > 800 && menuClose();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleMenuClose);
+    return () => window.removeEventListener('resize', handleMenuClose);
+  }, []);
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : 'visible';
+    return () => {
+      document.body.style.overflow = 'visible';
+    };
+  }, [menuOpen]);
+  useEffect(() => {
+    menuClose();
+  }, [pathname]);
 
   return (
     <header className={`${styles.header} mw`}>
