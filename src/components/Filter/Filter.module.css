@@ -1,0 +1,9 @@
+.filter {
+  @apply flex flex-col gap-2;
+}
+.filter button {
+  @apply bg-neutral-gray rounded-lg py-1;
+}
+.filter button.active {
+  @apply bg-main-accent;
+}
