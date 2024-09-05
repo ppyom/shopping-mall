@@ -11,7 +11,7 @@ const ProductSection = ({ products }: Props) => {
   return (
     <section className={styles.productSection}>
       <h3>Shop The Latest</h3>
-      <Link to="products">View All</Link>
+      <Link to="product">View All</Link>
       <Products products={products} />
     </section>
   );
