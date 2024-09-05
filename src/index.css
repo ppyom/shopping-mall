@@ -16,7 +16,12 @@ h1 {
   @apply text-2xl;
 }
 h2 {
-  @apply text-xl;
+  @apply font-bold;
+  @apply text-3xl;
+}
+h3 {
+  @apply font-medium;
+  @apply text-2xl leading-loose;
 }
 p.large {
   @apply text-lg;
@@ -26,5 +31,5 @@ p.small {
 }
 
 .mw {
-  @apply max-w-screen-xl w-full mx-auto;
+  @apply max-w-screen-lg w-full mx-auto;
 }
