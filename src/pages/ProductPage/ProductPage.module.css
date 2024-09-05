@@ -10,7 +10,7 @@
 
 @media (max-width: 768px) {
   .productPage {
-    @apply flex-col;
+    @apply flex-col gap-4;
   }
   .products {
     @apply w-full;
