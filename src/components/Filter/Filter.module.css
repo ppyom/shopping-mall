@@ -11,3 +11,12 @@
 .filter button.active {
   @apply bg-main-accent;
 }
+
+@media (max-width: 768px) {
+  .filter {
+    @apply w-full flex-row;
+  }
+  .filter button {
+    @apply flex-1;
+  }
+}
