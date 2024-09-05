@@ -1,0 +1,18 @@
+.productPage {
+  @apply flex flex-wrap justify-between;
+}
+.productPage h2 {
+  @apply w-full py-4;
+}
+.products {
+  @apply w-[calc(100%-10rem-2rem)] grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))];
+}
+
+@media (max-width: 768px) {
+  .productPage {
+    @apply flex-col;
+  }
+  .products {
+    @apply w-full;
+  }
+}

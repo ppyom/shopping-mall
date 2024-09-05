@@ -1,0 +1,22 @@
+.filter {
+  @apply w-40;
+  @apply flex flex-col gap-2;
+}
+.filter button {
+  @apply bg-neutral-gray rounded-lg py-1;
+}
+.filter button:hover {
+  @apply bg-main-accent/80;
+}
+.filter button.active {
+  @apply bg-main-accent;
+}
+
+@media (max-width: 768px) {
+  .filter {
+    @apply w-full flex-row;
+  }
+  .filter button {
+    @apply flex-1;
+  }
+}

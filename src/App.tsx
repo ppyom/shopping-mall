@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/layouts/Header/Header.tsx';
 import MainPage from './pages/MainPage/MainPage.tsx';
+import ProductPage from './pages/ProductPage/ProductPage.tsx';
 import Footer from './components/layouts/Footer/Footer.tsx';
 
 const App = () => {
@@ -8,7 +9,8 @@ const App = () => {
     <>
       <Header />
       <Routes>
-        <Route index={true} element={<MainPage />} />
+        <Route index element={<MainPage />} />
+        <Route path="product" element={<ProductPage />} />
       </Routes>
       <Footer />
     </>
