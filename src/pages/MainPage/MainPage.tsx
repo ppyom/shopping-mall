@@ -1,5 +1,7 @@
+import PageLayout from '../../components/layouts/PageLayout/PageLayout.tsx';
+
 const MainPage = () => {
-  return <main>Main</main>;
+  return <PageLayout>Main</PageLayout>;
 };
 
 export default MainPage;

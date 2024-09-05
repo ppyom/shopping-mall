@@ -1,0 +1,3 @@
+.pageLayout {
+  @apply p-4 min-h-[calc(100vh-4.5rem-3rem)];
+}
