@@ -1,31 +1,42 @@
 import { useState } from 'react';
+import { Link, NavLink, NavLinkRenderProps } from 'react-router-dom';
 import styles from './Header.module.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const setActiveLink = ({ isActive }: NavLinkRenderProps) => {
+    return isActive ? styles.active : '';
+  };
+
   return (
     <header className={`${styles.header} mw`}>
-      <a href="#">
+      <Link to="/">
         <h1 hidden>Shop</h1>
         <img className={styles.logo} src="/images/logo.svg" alt="로고" />
-      </a>
+      </Link>
       <nav className={`${menuOpen ? styles.on : ''}`}>
         <div className={styles.gnb}>
-          <a href="#product">Product</a>
-          <a href="#blog">Blog</a>
-          <a href="#our">Our Story</a>
+          <NavLink to="product" className={setActiveLink}>
+            Product
+          </NavLink>
+          <NavLink to="blog" className={setActiveLink}>
+            Blog
+          </NavLink>
+          <NavLink to="our" className={setActiveLink}>
+            Our Story
+          </NavLink>
         </div>
         <div>
-          <a href="#search">
+          <NavLink to="search" className={setActiveLink}>
             <i className="fa-solid fa-magnifying-glass" />
-          </a>
-          <a href="#cart">
+          </NavLink>
+          <NavLink to="cart" className={setActiveLink}>
             <i className="fa-solid fa-cart-shopping" />
-          </a>
-          <a href="#mypage">
+          </NavLink>
+          <NavLink to="mypage" className={setActiveLink}>
             <i className="fa-solid fa-user" />
-          </a>
+          </NavLink>
         </div>
       </nav>
       <button className={styles.menuBtn} onClick={() => setMenuOpen(!menuOpen)}>

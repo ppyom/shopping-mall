@@ -13,6 +13,7 @@
   @apply text-main-black font-medium;
   @apply duration-300;
 }
+.header a.active,
 .header a:hover {
   @apply text-main-accent;
 }
@@ -39,6 +40,7 @@
   .header nav a {
     @apply p-4;
   }
+  .header a.active,
   .header nav a:hover {
     @apply bg-main-accent/10;
   }
