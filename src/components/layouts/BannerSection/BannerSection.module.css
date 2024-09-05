@@ -1,0 +1,36 @@
+.bannerSection {
+  @apply relative;
+}
+.slider {
+}
+
+.paginationBullet {
+  @apply inline-block cursor-pointer;
+  @apply w-4 h-4 mx-1;
+  @apply bg-main-white/30;
+}
+.paginationBulletActive {
+  @apply bg-main-accent;
+}
+.navBtn {
+  @apply absolute top-1/2 -translate-y-1/2 z-50;
+  @apply w-12 h-12 text-xl cursor-pointer;
+  @apply text-main-white bg-main-white/30 shadow;
+  @apply border-2 border-main-white rounded-full;
+  @apply duration-300;
+}
+.navBtn:disabled {
+  @apply opacity-50 cursor-default pointer-events-none;
+}
+.prevBtn {
+  @apply left-2;
+}
+.prevBtn:hover {
+  @apply left-1;
+}
+.nextBtn {
+  @apply right-2;
+}
+.nextBtn:hover {
+  @apply right-1;
+}

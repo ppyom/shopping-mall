@@ -1,0 +1,10 @@
+.item {
+  @apply relative pt-[50%] overflow-hidden;
+}
+.item p {
+  @apply absolute top-1/2 -translate-y-1/2 left-20 z-10;
+  @apply font-medium text-3xl text-main-white drop-shadow-lg;
+}
+.item img {
+  @apply absolute top-0 w-full object-cover;
+}

@@ -2,11 +2,100 @@
   "products": [
     {
       "id": "1",
-      "title": "Title",
-      "img": "imageUrl.png",
-      "price": 1000,
-      "category": "categoryName",
+      "title": "Ring1",
+      "img": "product1.png",
+      "price": 250000,
+      "category": "top",
+      "discount": 12
+    },
+    {
+      "id": "2",
+      "title": "Ring2",
+      "img": "product2.png",
+      "price": 125000,
+      "category": "top",
+      "discount": 5
+    },
+    {
+      "id": "3",
+      "title": "Ring3",
+      "img": "product3.png",
+      "price": 320000,
+      "category": "top",
       "discount": 0
+    },
+    {
+      "id": "4",
+      "title": "Ring4",
+      "img": "product4.png",
+      "price": 25000,
+      "category": "new",
+      "discount": 15
+    },
+    {
+      "id": "5",
+      "title": "Necklace1",
+      "img": "product5.png",
+      "price": 15000,
+      "category": "new",
+      "discount": 0
+    },
+    {
+      "id": "6",
+      "title": "Earrings1",
+      "img": "product6.png",
+      "price": 15000,
+      "category": "new",
+      "discount": 15
+    },
+    {
+      "id": "7",
+      "title": "Hairpin",
+      "img": "product7.png",
+      "price": 12000,
+      "category": "new",
+      "discount": 0
+    },
+    {
+      "id": "8",
+      "title": "Earrings2",
+      "img": "product8.png",
+      "price": 25000,
+      "category": "new",
+      "discount": 0
+    },
+    {
+      "id": "9",
+      "title": "Necklace2",
+      "img": "product9.png",
+      "price": 35000,
+      "category": "new",
+      "discount": 20
+    },
+    {
+      "id": "10",
+      "title": "Hairpin2",
+      "img": "product10.png",
+      "price": 22500,
+      "category": "new",
+      "discount": 45
+    }
+  ],
+  "banners": [
+    {
+      "id": "1",
+      "title": "배너 제목 1",
+      "img": "banner1.jpg"
+    },
+    {
+      "id": "2",
+      "title": "배너 제목 2",
+      "img": "banner2.jpg"
+    },
+    {
+      "id": "3",
+      "title": "배너 제목 3",
+      "img": "banner3.jpg"
     }
   ]
 }
