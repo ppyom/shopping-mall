@@ -24,3 +24,7 @@ p.large {
 p.small {
   @apply text-sm;
 }
+
+.mw {
+  @apply max-w-screen-xl w-full mx-auto;
+}
