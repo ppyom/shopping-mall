@@ -1,0 +1,45 @@
+.header {
+  @apply relative p-4;
+  @apply flex justify-between items-center;
+}
+.logo {
+  @apply w-24;
+}
+.header > nav,
+.header > nav > div {
+  @apply flex gap-4;
+}
+.header a {
+  @apply text-main-black font-medium;
+  @apply duration-300;
+}
+.header a:hover {
+  @apply text-main-accent;
+}
+.menuBtn {
+  @apply absolute right-4;
+  @apply p-2 text-lg;
+  @apply hidden;
+}
+
+@media (max-width: 768px) {
+  .menuBtn {
+    @apply block;
+  }
+  .header nav {
+    /*@apply hidden;*/
+    @apply fixed top-16 left-0;
+    @apply w-full h-full p-8;
+    @apply flex-col items-center text-center;
+    @apply bg-main-white/25 backdrop-blur-sm;
+  }
+  .header nav a {
+    @apply p-4;
+  }
+  .header nav a:hover {
+    @apply bg-main-accent/10;
+  }
+  .gnb {
+    @apply flex-col w-full;
+  }
+}
