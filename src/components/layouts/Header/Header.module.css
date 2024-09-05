@@ -28,7 +28,7 @@
   }
   .header nav {
     @apply hidden;
-    @apply fixed top-16 left-0;
+    @apply fixed top-16 left-0 z-[1000];
     @apply w-full h-full p-8;
     @apply flex-col items-center text-center;
     @apply bg-main-white/25 backdrop-blur-sm;
