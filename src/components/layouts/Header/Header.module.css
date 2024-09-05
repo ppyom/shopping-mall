@@ -27,11 +27,14 @@
     @apply block;
   }
   .header nav {
-    /*@apply hidden;*/
+    @apply hidden;
     @apply fixed top-16 left-0;
     @apply w-full h-full p-8;
     @apply flex-col items-center text-center;
     @apply bg-main-white/25 backdrop-blur-sm;
+  }
+  .header nav.on {
+    @apply flex;
   }
   .header nav a {
     @apply p-4;

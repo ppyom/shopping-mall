@@ -1,13 +1,16 @@
+import { useState } from 'react';
 import styles from './Header.module.css';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className={`${styles.header} mw`}>
       <a href="#">
         <h1 hidden>Shop</h1>
         <img className={styles.logo} src="/images/logo.svg" alt="로고" />
       </a>
-      <nav>
+      <nav className={`${menuOpen ? styles.on : ''}`}>
         <div className={styles.gnb}>
           <a href="#product">Product</a>
           <a href="#blog">Blog</a>
@@ -25,8 +28,12 @@ const Header = () => {
           </a>
         </div>
       </nav>
-      <button className={styles.menuBtn}>
-        <i className="fa-solid fa-bars" />
+      <button className={styles.menuBtn} onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? (
+          <i className="fa-solid fa-xmark" />
+        ) : (
+          <i className="fa-solid fa-bars" />
+        )}
       </button>
     </header>
   );
