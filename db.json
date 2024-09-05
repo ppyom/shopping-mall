@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Title",
+      "img": "imageUrl.png",
+      "price": 1000,
+      "category": "categoryName",
+      "discount": 0
+    }
+  ]
+}
