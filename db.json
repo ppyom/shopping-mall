@@ -8,5 +8,22 @@
       "category": "categoryName",
       "discount": 0
     }
+  ],
+  "banners": [
+    {
+      "id": "1",
+      "title": "배너 제목 1",
+      "img": "banner1.jpg"
+    },
+    {
+      "id": "2",
+      "title": "배너 제목 2",
+      "img": "banner2.jpg"
+    },
+    {
+      "id": "3",
+      "title": "배너 제목 3",
+      "img": "banner3.jpg"
+    }
   ]
 }
