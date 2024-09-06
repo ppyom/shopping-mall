@@ -1,5 +1,8 @@
 {
-  "categories": ["all", "top", "new"],
+  "categories": [
+    { "option": "top", "label": "베스트" },
+    { "option": "new", "label": "신상품" }
+  ],
   "products": [
     {
       "id": "1",
