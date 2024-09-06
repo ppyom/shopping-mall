@@ -1,4 +1,4 @@
-.product > div {
+.product {
   @apply h-full overflow-hidden;
   @apply border-2 border-neutral-gray rounded;
   @apply relative;

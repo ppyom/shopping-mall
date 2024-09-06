@@ -11,7 +11,9 @@ const Products = ({ products, className = '' }: Props) => {
   return (
     <ul className={`${styles.products} ${className}`}>
       {products.map((product) => (
-        <Product key={`product_${product.id}`} {...product} />
+        <li key={`product_${product.id}`}>
+          <Product {...product} />
+        </li>
       ))}
     </ul>
   );
