@@ -17,7 +17,7 @@ const Header = () => {
 
   const menuClose = () => setMenuOpen(false);
   const handleMenuClose = ({ target }: WindowEventMap['resize']) => {
-    if (target instanceof window) {
+    if (target instanceof Window) {
       target.innerWidth > 800 && menuClose();
     }
   };
