@@ -1,3 +1,4 @@
+import APIClient from './apiClient.ts';
 import type { Product } from '../types/product.ts';
 
 interface ProductSearchParams {
@@ -8,7 +9,7 @@ interface ProductSearchParams {
 }
 
 class ProductAPI {
-  private static baseurl = 'http://localhost:8000/products';
+  private static endpoint = 'products';
   static async getProducts(
     options: ProductSearchParams = {},
   ): Promise<Product[]> {
@@ -20,9 +21,10 @@ class ProductAPI {
         return [key, value];
       }),
     );
-    const url = new URL(`${this.baseurl}?${searchParams.toString()}`);
-    const response = await fetch(url);
-    return await response.json();
+    return await APIClient.getItems<Product[]>(
+      this.endpoint,
+      searchParams.toString(),
+    );
   }
 }
 

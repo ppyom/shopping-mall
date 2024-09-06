@@ -1,3 +1,4 @@
+import APIClient from './apiClient.ts';
 import type { Banner } from '../types/banner.ts';
 
 interface BannerSearchParams {
@@ -5,16 +6,17 @@ interface BannerSearchParams {
 }
 
 class BannerAPI {
-  private static baseurl = 'http://localhost:8000/banners';
+  private static endpoint = 'banners';
   static async getBanners({ limit = 3 }: BannerSearchParams = {}): Promise<
     Banner[]
   > {
     const searchParams = new URLSearchParams({
       _limit: limit?.toString(),
     });
-    const url = new URL(`${this.baseurl}?${searchParams.toString()}`);
-    const response = await fetch(url);
-    return await response.json();
+    return await APIClient.getItems<Banner[]>(
+      this.endpoint,
+      searchParams.toString(),
+    );
   }
 }
 
