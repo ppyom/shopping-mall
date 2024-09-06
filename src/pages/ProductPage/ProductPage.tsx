@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import ProductAPI from '../../apis/product.ts';
 import PageLayout from '../../components/layouts/PageLayout/PageLayout.tsx';
+import Categories from '../../components/Categories/Categories.tsx';
 import Sort from '../../components/Sort/Sort.tsx';
 import Products from '../../components/Products/Products.tsx';
 import styles from './ProductPage.module.css';
@@ -41,6 +42,7 @@ const ProductPage = () => {
   return (
     <PageLayout className={styles.productPage}>
       <h2>Shop The Latest</h2>
+      <Categories className={styles.categories} />
       <Sort current={sort} update={handleUpdateSort} />
       <div className={styles.productsCon}>
         <Products className={styles.products} products={products} />

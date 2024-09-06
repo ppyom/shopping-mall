@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Header from './components/layouts/Header/Header.tsx';
 import MainPage from './pages/MainPage/MainPage.tsx';
 import ProductPage from './pages/ProductPage/ProductPage.tsx';
@@ -10,7 +10,13 @@ const App = () => {
       <Header />
       <Routes>
         <Route index element={<MainPage />} />
-        <Route path="product" element={<ProductPage />} />
+        <Route path="product">
+          <Route
+            index={true}
+            element={<Navigate to="/product/all" replace />}
+          />
+          <Route path="/product/:id" element={<ProductPage />} />
+        </Route>
       </Routes>
       <Footer />
     </>
