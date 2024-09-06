@@ -7,24 +7,51 @@ import styles from './ProductPage.module.css';
 import type { Product } from '../../types/product.ts';
 import type { SortOption } from '../../types/sort.ts';
 
+const LIMIT = 12;
+
 const ProductPage = () => {
+  const [page, setPage] = useState<number>(1);
   const [sort, setSort] = useState<SortOption>('');
   const [products, setProducts] = useState<Product[]>([]);
+  const [isDone, setIsDone] = useState<boolean>(false);
 
-  const handleUpdateFilter = (sort: SortOption) => {
-    setSort(sort);
+  const handleUpdateSort = (option: SortOption) => {
+    if (sort !== option) {
+      setSort(option);
+      setPage(1);
+      setIsDone(false);
+    }
+  };
+  const handleMore = () => {
+    setPage(page + 1);
   };
 
   useEffect(() => {
-    ProductAPI.getProducts({ sort }) //
-      .then(setProducts);
-  }, [sort]);
+    ProductAPI.getProducts({ sort, limit: LIMIT * page }) //
+      .then((data) => {
+        if (data.length < LIMIT * (page - 1)) {
+          throw new Error('');
+        }
+        return data;
+      })
+      .then(setProducts)
+      .catch(() => setIsDone(true));
+  }, [sort, page]);
 
   return (
     <PageLayout className={styles.productPage}>
       <h2>Shop The Latest</h2>
-      <Sort current={sort} update={handleUpdateFilter} />
-      <Products className={styles.products} products={products} />
+      <Sort current={sort} update={handleUpdateSort} />
+      <div className={styles.productsCon}>
+        <Products className={styles.products} products={products} />
+        <button
+          className={styles.moreBtn}
+          onClick={handleMore}
+          disabled={isDone}
+        >
+          더보기
+        </button>
+      </div>
     </PageLayout>
   );
 };

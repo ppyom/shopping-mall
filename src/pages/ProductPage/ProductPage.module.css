@@ -4,15 +4,31 @@
 .productPage h2 {
   @apply w-full py-4;
 }
+.productsCon {
+  @apply w-[calc(100%-10rem-2rem)];
+}
 .products {
-  @apply w-[calc(100%-10rem-2rem)] grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))];
+  @apply grid-cols-[repeat(auto-fill,minmax(200px,1fr))];
+}
+.moreBtn {
+  @apply w-full p-2 mt-6;
+  @apply rounded border-2 border-main-accent/50 text-main-accent;
+  @apply font-bold;
+  @apply duration-300;
+}
+.moreBtn:hover {
+  @apply border-main-accent bg-main-accent/20;
+}
+.moreBtn:disabled {
+  @apply pointer-events-none opacity-50;
+  @apply border-neutral-darkGray bg-neutral-lightGray text-neutral-darkGray;
 }
 
 @media (max-width: 768px) {
   .productPage {
     @apply flex-col gap-4;
   }
-  .products {
+  .productsCon {
     @apply w-full;
   }
 }
