@@ -4,6 +4,9 @@
 .productPage h2 {
   @apply w-full py-4;
 }
+.categories {
+  @apply w-full justify-center pt-4 pb-8;
+}
 .productsCon {
   @apply w-[calc(100%-10rem-2rem)];
 }

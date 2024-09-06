@@ -1,4 +1,8 @@
 {
+  "categories": [
+    { "option": "top", "label": "베스트" },
+    { "option": "new", "label": "신상품" }
+  ],
   "products": [
     {
       "id": "1",
@@ -79,6 +83,86 @@
       "price": 22500,
       "category": "new",
       "discount": 45
+    },
+    {
+      "id": "11",
+      "title": "Ring5",
+      "img": "product1.png",
+      "price": 275000,
+      "category": "top",
+      "discount": 15
+    },
+    {
+      "id": "12",
+      "title": "Ring7",
+      "img": "product2.png",
+      "price": 525000,
+      "category": "top",
+      "discount": 55
+    },
+    {
+      "id": "13",
+      "title": "Ring8",
+      "img": "product3.png",
+      "price": 365000,
+      "category": "top",
+      "discount": 0
+    },
+    {
+      "id": "14",
+      "title": "Ring6",
+      "img": "product4.png",
+      "price": 22000,
+      "category": "new",
+      "discount": 0
+    },
+    {
+      "id": "15",
+      "title": "Necklace3",
+      "img": "product5.png",
+      "price": 45000,
+      "category": "new",
+      "discount": 10
+    },
+    {
+      "id": "16",
+      "title": "Earrings3",
+      "img": "product6.png",
+      "price": 83000,
+      "category": "new",
+      "discount": 0
+    },
+    {
+      "id": "17",
+      "title": "Hairpin3",
+      "img": "product7.png",
+      "price": 67500,
+      "category": "new",
+      "discount": 0
+    },
+    {
+      "id": "18",
+      "title": "Earrings4",
+      "img": "product8.png",
+      "price": 75000,
+      "category": "new",
+      "discount": 0
+    },
+    {
+      "id": "19",
+      "title": "Necklace4",
+      "img": "product9.png",
+      "price": 32500,
+      "category": "new",
+      "discount": 33
+    },
+    {
+      "id": "20",
+      "title": "Hairpin4",
+      "img": "product10.png",
+      "price": 20500,
+      "category": "new",
+      "discount": 22
     }
   ],
   "banners": [

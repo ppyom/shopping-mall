@@ -1,0 +1,19 @@
+.categories {
+  @apply flex gap-2 items-center;
+  @apply font-medium;
+}
+.categories a {
+  @apply duration-300;
+}
+.categories a:hover {
+  @apply text-main-accent/80;
+}
+.categories a.active {
+  @apply text-main-accent;
+  @apply relative;
+}
+.categories a.active::before {
+  content: "";
+  @apply absolute left-0 bottom-0;
+  @apply w-full h-0.5 bg-main-accent;
+}
