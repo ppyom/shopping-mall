@@ -1,22 +1,23 @@
-.filter {
+.sort {
   @apply w-40;
   @apply flex flex-col gap-2;
 }
-.filter button {
-  @apply bg-neutral-gray rounded-lg py-1;
+.sort button {
+  @apply bg-main-accent/30 rounded-lg py-1;
+  @apply duration-300;
 }
-.filter button:hover {
-  @apply bg-main-accent/80;
+.sort button:hover {
+  @apply bg-main-accent/50;
 }
-.filter button.active {
-  @apply bg-main-accent;
+.sort button.active {
+  @apply bg-main-accent text-main-white;
 }
 
 @media (max-width: 768px) {
-  .filter {
+  .sort {
     @apply w-full flex-row;
   }
-  .filter button {
+  .sort button {
     @apply flex-1;
   }
 }

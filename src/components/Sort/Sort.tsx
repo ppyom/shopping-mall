@@ -8,7 +8,7 @@ interface Props {
 
 const Sort = ({ current, update }: Props) => {
   return (
-    <nav className={styles.filter}>
+    <nav className={styles.sort}>
       {sortOptionList.map(({ id, option, label }) => (
         <button
           key={`sort_${id}`}
