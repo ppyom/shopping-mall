@@ -1,0 +1,38 @@
+.detailSection {
+  @apply flex items-center gap-4;
+}
+.detailSection > div {
+  @apply flex-1;
+}
+.imageCon img {
+  @apply size-full object-cover;
+}
+.info {
+  @apply flex flex-col gap-4;
+}
+.title {
+  @apply text-lg font-medium;
+}
+.priceCon {
+  @apply flex gap-2 font-medium;
+}
+.cancel {
+  @apply line-through;
+}
+.discount {
+  @apply bg-main-accent text-main-white px-2 rounded-lg;
+}
+.discounted {
+  @apply text-service-errors;
+}
+.description {
+  @apply min-h-32;
+}
+.addBtn {
+  @apply py-2;
+  @apply text-main-accent border-2 border-main-accent rounded-lg;
+  @apply duration-300;
+}
+.addBtn:hover {
+  @apply bg-main-accent/20;
+}
