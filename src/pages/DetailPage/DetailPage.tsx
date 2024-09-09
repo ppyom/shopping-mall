@@ -18,7 +18,7 @@ const DetailPage = () => {
   return (
     <PageLayout>
       <h2>상세 페이지</h2>
-      <DetailSection />
+      {product && <DetailSection {...product} />}
       <DescriptionTabSection />
       <OtherProductSection />
     </PageLayout>
