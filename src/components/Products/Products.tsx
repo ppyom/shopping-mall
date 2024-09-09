@@ -1,4 +1,4 @@
-import Product from './Product/Product.tsx';
+import Product from '../Product/Product.tsx';
 import styles from './Products.module.css';
 import type { Product as ProductType } from '../../types/product.ts';
 

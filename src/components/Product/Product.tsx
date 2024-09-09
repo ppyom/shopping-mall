@@ -1,5 +1,5 @@
 import styles from './Product.module.css';
-import type { Product as ProductType } from '../../../types/product.ts';
+import type { Product as ProductType } from '../../types/product.ts';
 
 interface Props extends ProductType {}
 
