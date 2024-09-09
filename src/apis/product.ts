@@ -26,6 +26,9 @@ class ProductAPI {
       searchParams.toString(),
     );
   }
+  static async getProduct(id: string) {
+    return await APIClient.getItems<Product>(`${this.endpoint}/${id}`);
+  }
 }
 
 export default ProductAPI;
