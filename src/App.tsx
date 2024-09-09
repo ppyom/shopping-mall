@@ -3,6 +3,7 @@ import Header from './components/layouts/Header/Header.tsx';
 import MainPage from './pages/MainPage/MainPage.tsx';
 import ProductPage from './pages/ProductPage/ProductPage.tsx';
 import Footer from './components/layouts/Footer/Footer.tsx';
+import DetailPage from './pages/DetailPage/DetailPage.tsx';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           />
           <Route path="/product/:id" element={<ProductPage />} />
         </Route>
+        <Route path="/product/:category/:id" element={<DetailPage />} />
       </Routes>
       <Footer />
     </>
