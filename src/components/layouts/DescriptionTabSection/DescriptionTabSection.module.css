@@ -1,0 +1,26 @@
+.tabButtons {
+  @apply flex items-center gap-2;
+}
+.tabButtons button {
+  @apply text-lg px-4 py-2;
+  @apply border-x-2 border-t-2 border-transparent;
+  @apply rounded-t-xl;
+}
+.tabButtons button.active {
+  @apply border-main-accent;
+  @apply rounded-t-xl;
+}
+.tabButtons button:hover,
+.tabButtons button.active {
+  @apply bg-main-accent/10;
+}
+.contents {
+  @apply p-4 min-h-60;
+  @apply border-2 border-main-accent/30;
+}
+.content {
+  @apply hidden;
+}
+.content.active {
+  @apply block;
+}
