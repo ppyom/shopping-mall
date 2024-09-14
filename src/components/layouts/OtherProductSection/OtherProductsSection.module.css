@@ -1,0 +1,26 @@
+.otherProductSection {
+  @apply relative;
+  @apply mt-4;
+}
+.slider {
+}
+.btnGroup {
+  @apply absolute top-0 right-0;
+  @apply flex gap-1;
+}
+.navBtn {
+  @apply w-12 h-12 text-xl cursor-pointer;
+  @apply text-main-accent bg-main-accent/30;
+  @apply border-2 border-main-white rounded-full;
+  @apply duration-300;
+}
+.navBtn:hover {
+  @apply bg-main-accent/50;
+}
+.prevBtn {
+}
+.nextBtn {
+}
+.navBtn:disabled {
+  @apply opacity-50 pointer-events-none;
+}

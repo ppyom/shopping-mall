@@ -1,0 +1,16 @@
+.counter {
+  @apply flex justify-between items-center;
+  @apply w-24 overflow-hidden;
+  @apply bg-neutral-lightGray rounded;
+}
+.counter button {
+  @apply p-2;
+  @apply duration-300;
+}
+.counter button:hover {
+  @apply bg-neutral-gray/50;
+}
+.counter button:disabled {
+  @apply text-neutral-gray;
+  @apply pointer-events-none;
+}
